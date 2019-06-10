@@ -20,9 +20,12 @@ If you have an Intel system with an X79, X99, or X299 chipset and want to test M
 
 Supplemental BIOS patches may be required to mitigate issues caused by ME firmware removal, and these patches may not exist. The following issues have been reported:
 
-- Onboard LAN non-functional on a cold boot
+X79:
+- Onboard LAN non-functional on a cold boot (fix possible, Linux only?)
 - Excessive POST times
-- Reappearance of a broken MEI device on the PCI bus
+- Reappearance of a broken MEI device on the PCI bus (fix possible)
+- Onboard LAN identified as incorrect model in Windows (still works)
+- Miscellaneous changes to devices in Windows device manager
 
 The Windows MEI drivers seem to interact particularly badly with a removed ME, especially if the MEI device reappears. Uninstall them if possible.
 
