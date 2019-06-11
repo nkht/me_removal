@@ -1,0 +1,13 @@
+# This makes MEPlatformPEI disable the first MEI device.
+# Without this, the broken MEI device can reappear on the
+# PCI bus, which can cause delays in the BIOS or Windows
+# boot process.
+# Tested on:
+# Rampage IV Extreme, BIOS Version 4901
+
+# patching a "or dword [0xfed1f428], 0x1c" to a
+#            "or dword [0xfed1f428], 0x1e".
+# 0xfed1f428 is RCBA + 0x3428, aka FD2.
+# See the X79 datasheet, document number 326514-002
+DC8D7710-FC35-4E22-8E4C-BD63A63F9C96 10 P:830D28F4D1FE1C:830D28F4D1FE1E 
+
